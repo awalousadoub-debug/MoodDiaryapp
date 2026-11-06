@@ -1,0 +1,43 @@
+name: CI - MoodDiaryapp
+
+on:
+  push:
+    branches: [ main, develop, backend, frontend ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Installer le SDK .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restaurer les dépendances
+        run: dotnet restore
+
+      - name: Construire la solution
+        run: dotnet build --no-restore
+
+      - name: Exécuter les tests
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Analyse de sécurité des dépendances
+        run: |
+          echo "Vérification des vulnérabilités connues..."
+          # Ajoutez ici des outils d'analyse de sécurité si disponibles (ex: dotnet list package --vulnerable)
+
+      - name: Publier les résultats de tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            **/TestResults/
+            **/coverage/

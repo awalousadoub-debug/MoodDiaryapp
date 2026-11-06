@@ -1,0 +1,18 @@
+# CODEOWNERS - MoodDiaryapp
+# Le propriétaire du dépôt est le réviseur obligatoire pour tous les fichiers du projet.
+
+# Règle globale : le propriétaire du dépôt examine et approuve tout
+* @awalousadoub-debug
+
+# Backend - révision obligatoire par le propriétaire
+/backend/ @awalousadoub-debug
+
+# Frontend - révision obligatoire par le propriétaire
+/frontend/ @awalousadoub-debug
+
+# Documentation et configuration - révision obligatoire par le propriétaire
+/.github/ @awalousadoub-debug
+*.md @awalousadoub-debug
+*.json @awalousadoub-debug
+*.yml @awalousadoub-debug
+*.yaml @awalousadoub-debug
