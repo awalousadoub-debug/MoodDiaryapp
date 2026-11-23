@@ -34,10 +34,6 @@ jobs:
           distribution: temurin
           java-version: ${{ steps.project.outputs.java_version }}
 
-      - name: Installer le SDK Android
-        if: steps.project.outputs.run_android_build == 'true'
-        uses: android-actions/setup-android@v3
-
       - name: Restaurer les dépendances Gradle
         if: steps.project.outputs.run_android_build == 'true'
         working-directory: ${{ steps.project.outputs.android_root }}
