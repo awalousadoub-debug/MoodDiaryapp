@@ -39,3 +39,9 @@ secrets.json
 .env.local
 *.pem
 *.key
+# Android et Gradle
+.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
