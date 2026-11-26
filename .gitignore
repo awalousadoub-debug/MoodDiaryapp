@@ -32,6 +32,13 @@ out/
 *.log
 logs/
 
+# Python
+__pycache__/
+*.pyc
+
+# Artifacts
+.artifacts/
+
 # Secrets locaux
 appsettings.Development.json
 secrets.json
@@ -39,9 +46,12 @@ secrets.json
 .env.local
 *.pem
 *.key
+MoodDiary-dev.txt
+
 # Android et Gradle
 .gradle/
 **/build/
 local.properties
 *.iml
 .idea/
+secrets.properties

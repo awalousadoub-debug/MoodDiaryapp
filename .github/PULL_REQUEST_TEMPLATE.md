@@ -21,7 +21,7 @@ Cochez les cases pertinentes :
 ## Tests effectués
 - [ ] Tests unitaires passés
 - [ ] Tests d'intégration passés
-- [ ] Build réussi (`dotnet build` ou équivalent)
+- [ ] Tests et build Android réussis (`<racine-android>/gradlew test assembleDebug`)
 - [ ] Vérification manuelle effectuée
 
 ## Checklist de sécurité
